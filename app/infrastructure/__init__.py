@@ -1,9 +1,8 @@
-# app/infrastructure/__init__.py
-from .database import TaskRepository, TaskModel  # Importa componentes de base de datos
-from .config import Config  # Importa configuración
+from .database import TaskRepository, TaskModel 
+from app.infrastructure.config import AlchemyConfig 
 
 __all__ = [
     'TaskRepository',
     'TaskModel',
-    'Config'
+    'AlchemyConfig'
 ]

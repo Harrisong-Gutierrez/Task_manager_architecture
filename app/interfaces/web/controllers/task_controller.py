@@ -4,7 +4,7 @@ from app.core.services import TaskService
 from app.infrastructure.database import TaskRepository
 from app.core.models import Priority
 from datetime import datetime
-from app.infrastructure import db
+from app import db
 
 bp = Blueprint('tasks', __name__, url_prefix='/tasks')
 

@@ -1,7 +1,9 @@
 # run.py
 from app import create_app
-from app.infrastructure.config import Config
+
 import logging
+
+from app.infrastructure.config import AlchemyConfig
 
 # Configura logging básico
 logging.basicConfig(
@@ -9,7 +11,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 
-app = create_app(Config)
+app = create_app(AlchemyConfig)
 
 if __name__ == '__main__':
     try:

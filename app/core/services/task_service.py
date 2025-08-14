@@ -1,15 +1,12 @@
-# app/core/services/task_service.py
+from typing import Optional, List
 from datetime import datetime
 from uuid import uuid4
-from typing import List, Optional
-
-from app.core.models import Task, Priority
+from ..models.task_models import Task, Priority
 from app.infrastructure.database.repository import TaskRepository
 
-
 class TaskService:
-    def __init__(self, task_repository: TaskRepository):
-        self.repository = task_repository
+    def __init__(self, repository: TaskRepository):
+        self.repository = repository
 
     def create_task(
         self,

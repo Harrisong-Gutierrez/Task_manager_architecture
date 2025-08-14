@@ -7,7 +7,7 @@ from sqlalchemy.pool import NullPool
 # Carga variables de entorno
 load_dotenv()
 
-class Config:
+class AlchemyConfig:
     """Configuración de infraestructura para la aplicación"""
     
     # Configuración de base de datos
@@ -26,7 +26,7 @@ class Config:
 
 # Engine para conexiones directas (opcional)
 engine = create_engine(
-    Config.SQLALCHEMY_DATABASE_URI,
+    AlchemyConfig.SQLALCHEMY_DATABASE_URI,
     poolclass=NullPool,
     echo=False  # Cambiar a True para debug
 )

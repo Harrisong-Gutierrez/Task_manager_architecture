@@ -1,12 +1,14 @@
 # app/__init__.py
-from flask import Flask
+from flask import Config, Flask
 from flask_sqlalchemy import SQLAlchemy
-from app.infrastructure.config import Config
+
+from app.infrastructure.config import AlchemyConfig
+
 
 # Inicializa extensiones
 db = SQLAlchemy()
 
-def create_app(config_class=Config):
+def create_app(config_class=AlchemyConfig):
     """Factory principal de la aplicación Flask"""
     
     # Configura la aplicación

@@ -1,10 +1,10 @@
-# app/infrastructure/database/repository.py
+
 from typing import List, Optional
 from sqlalchemy.orm import Session
 from sqlalchemy import desc
-from datetime import datetime
 from app.infrastructure.database.models import TaskModel
-from app.core.models import Task, Priority
+from app.core.models.task_models import Task, Priority
+
 
 class TaskRepository:
     def __init__(self, db_session: Session):

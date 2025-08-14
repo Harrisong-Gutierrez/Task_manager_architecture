@@ -1,7 +1,6 @@
-# app/core/models.py
 from enum import Enum
-from datetime import datetime
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Optional
 
 class Priority(Enum):
@@ -11,12 +10,7 @@ class Priority(Enum):
     
     @property
     def name(self) -> str:
-        names = {
-            1: "Baja",
-            2: "Media", 
-            3: "Alta"
-        }
-        return names[self.value]
+        return {1: "Baja", 2: "Media", 3: "Alta"}[self.value]
 
 @dataclass
 class Task:
