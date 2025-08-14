@@ -1,0 +1,17 @@
+# requirements.txt
+# Dependencias principales
+Flask==2.3.2
+python-dotenv==1.0.0
+psycopg2-binary==2.9.9
+Flask-SQLAlchemy==3.1.1
+Flask-WTF==1.2.1
+WTForms==3.1.2
+
+# Dependencias para desarrollo (opcional)
+pytest==8.1.1
+pytest-cov==4.1.0
+python-dateutil==2.9.0.post0
+
+# Dependencias para producción (opcional)
+gunicorn==21.2.0
+greenlet==3.0.3
